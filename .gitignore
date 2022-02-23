@@ -5,8 +5,8 @@
 .pytest_cache/
 .mypy_cache/
 
+venv/
 data/
 models/
-notebooks/
 
 **/.DS_Store
