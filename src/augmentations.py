@@ -96,8 +96,7 @@ class VICRegTransform(object):
         self.transform = transforms.Compose(
             [
                 transforms.RandomResizedCrop(
-                    224,
-                    interpolation=InterpolationMode.BICUBIC,
+                    224, interpolation=InterpolationMode.BICUBIC
                 ),
                 transforms.RandomHorizontalFlip(p=0.5),
                 transforms.RandomApply(
