@@ -24,8 +24,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN python3.9 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
-RUN python3.9 -m pip3 install --no-cache-dir --upgrade pip setuptools wheel isort
-RUN python3.9 -m pip3 install --no-cache-dir --default-timeout=180 -r requirements.txt
+RUN python3.9 -m pip install --no-cache-dir --upgrade pip setuptools wheel isort
+RUN python3.9 -m pip install --no-cache-dir --default-timeout=180 -r requirements.txt
 
 RUN find /opt/venv/lib/ -follow -type f -name '*.a' -delete \
     && find /opt/venv/lib/ -follow -type f -name '*.pyc' -delete \
