@@ -30,7 +30,7 @@ RUN CFLAGS="-g0 -Os -DNDEBUG -Wl,--strip-all -I/usr/include:/usr/local/include -
  		--compile \
 		--global-option=build_ext \
 		--global-option="-j 4" \
-		--default-timeout=100 \
+		--default-timeout=180 \
 		-r requirements.txt
 
 RUN find /opt/venv/lib/ -follow -type f -name '*.a' -delete \
